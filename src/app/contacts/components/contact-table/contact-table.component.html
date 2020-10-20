@@ -1,15 +1,58 @@
 <div class="mat-elevation-z8">
-  <table mat-table class="full-width-table" matSort aria-label="Elements">
+  <table [dataSource]="contactList" mat-table class="full-width-table" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <th mat-header-cell *matHeaderCellDef>Id</th>
       <td mat-cell *matCellDef="let row">{{ row.id }}</td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <th mat-header-cell *matHeaderCellDef>{{ 'Name' | translate }}</th>
       <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+    </ng-container>
+
+    <!-- Phone Number Column -->
+    <ng-container matColumnDef="phoneNumber">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ 'Phone number' | translate }}
+      </th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.phoneNumber }}
+      </td>
+    </ng-container>
+
+    <!-- Birthdate Column -->
+    <ng-container matColumnDef="birthdate">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ 'Birthdate' | translate }}
+      </th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.birthdate | date: 'dd/MM/yyyy' }}
+      </td>
+    </ng-container>
+
+    <!-- Technologies Column -->
+    <ng-container matColumnDef="technologies">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ 'Technologies' | translate }}
+      </th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.technologies.join(' ').trim() }}
+      </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ 'Actions' | translate }}
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <button [routerLink]="['/contacts', 'edit', row.id]" mat-raised-button color="primary">
+          <mat-icon> edit </mat-icon>
+          {{ 'Editar Contacto' | translate }}
+        </button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -18,7 +61,8 @@
 
   <mat-paginator
     #paginator
-    [length]="dataSource?.data.length"
+    *ngIf="contactList"
+    [length]="contactList?.length"
     [pageIndex]="0"
     [pageSize]="50"
     [pageSizeOptions]="[25, 50, 100, 250]"

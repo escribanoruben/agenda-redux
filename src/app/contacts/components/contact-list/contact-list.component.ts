@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { getMatIconNoHttpProviderError } from '@angular/material/icon';
 import { Contact } from '@app/contacts/models/contact';
 import { ContactsService } from '@app/contacts/services/contacts.service';
 

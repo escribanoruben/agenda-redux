@@ -1,42 +1,4 @@
 {
-  "technologies": [
-    {
-      "id": 1,
-      "name": "Angular"
-    },
-    {
-      "id": 2,
-      "name": "PHP"
-    },
-
-    {
-      "id": 3,
-      "name": "SQL"
-    },
-
-    {
-      "id": 4,
-      "name": ".Net"
-    },
-
-    {
-      "id": 5,
-      "name": "HTML"
-    },
-    {
-      "id": 6,
-      "name": "Javascript"
-    },
-    {
-      "id": 7,
-      "name": "CSS"
-    },
-    {
-      "id": 8,
-      "name": "Python"
-    }
-  ],
-
   "contacts": [
     {
       "id": 1,

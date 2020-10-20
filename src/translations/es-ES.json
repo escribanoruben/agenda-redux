@@ -6,5 +6,9 @@
   "Version": "Versión",
   "Contacts": "Contactos",
   "Contact List": "Lista de Contactos",
-  "Add new contact": "Crear nuevo contacto"
+  "Add new contact": "Crear nuevo contacto",
+  "Phone number": "Número de teléfono",
+  "Name": "Nombre",
+  "Birthdate": "Fecha de nacimiento",
+  "Technologies": "Technologías"
 }

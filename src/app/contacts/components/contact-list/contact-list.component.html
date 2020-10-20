@@ -1,10 +1,10 @@
 <div fxLayout="column" fxLayoutGap="20px" style="margin-top: 20px">
-  <button fxFlex mat-raised-button color="primary">
+  <button [routerLink]="['/contacts', 'create']" fxFlex mat-raised-button color="primary">
     <mat-icon> person_add </mat-icon>
     {{ 'Add new contact' | translate }}
   </button>
 
   <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
 
-  <app-contact-table *ngIf="contactList"></app-contact-table>
+  <app-contact-table *ngIf="contactList" [contactList]="contactList"></app-contact-table>
 </div>

@@ -6,5 +6,9 @@
   "Version": "Version",
   "Contacts": "Contacts",
   "Contact List": "Contact List",
-  "Add new contact": "Add new contact"
+  "Add new contact": "Add new contact",
+  "Phone number": "Phone number",
+  "Name": "Name",
+  "Birthdate": "Birthdate",
+  "Technologies": "Technologies"
 }
