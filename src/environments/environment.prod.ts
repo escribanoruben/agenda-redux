@@ -13,4 +13,5 @@ export const environment = {
   serverUrl: 'https://api.chucknorris.io',
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US', 'es-ES'],
+  baseUrl: 'http://agenda.xcribano.com',
 };

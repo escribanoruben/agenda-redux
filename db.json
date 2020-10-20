@@ -43,21 +43,21 @@
       "name": "Ruben Escribano",
       "phoneNumber": "+34616673030",
       "birthdate": "1981/07/21",
-      "technologies": [1, 2, 3, 4, 5, 6, 7, 8]
+      "technologies": ["Angular", "PHP", "SQL", ".Net", "HTML", "Javascript", "Python"]
     },
     {
       "id": 2,
       "name": "Guido van Rossum",
       "phoneNumber": "+31655579603",
       "birthdate": "1956/01/31",
-      "technologies": [8]
+      "technologies": ["Python"]
     },
     {
       "id": 3,
       "name": "Brendan Eich",
       "phoneNumber": "+4048730196",
       "birthdate": "1980/08/20",
-      "technologies": [5, 6, 7]
+      "technologies": ["HTML", "Javascript"]
     }
   ]
 }
