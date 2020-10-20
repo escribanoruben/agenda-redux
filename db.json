@@ -1,0 +1,63 @@
+{
+  "technologies": [
+    {
+      "id": 1,
+      "name": "Angular"
+    },
+    {
+      "id": 2,
+      "name": "PHP"
+    },
+
+    {
+      "id": 3,
+      "name": "SQL"
+    },
+
+    {
+      "id": 4,
+      "name": ".Net"
+    },
+
+    {
+      "id": 5,
+      "name": "HTML"
+    },
+    {
+      "id": 6,
+      "name": "Javascript"
+    },
+    {
+      "id": 7,
+      "name": "CSS"
+    },
+    {
+      "id": 8,
+      "name": "Python"
+    }
+  ],
+
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Ruben Escribano",
+      "phoneNumber": "+34616673030",
+      "birthdate": "1981/07/21",
+      "technologies": [1, 2, 3, 4, 5, 6, 7, 8]
+    },
+    {
+      "id": 2,
+      "name": "Guido van Rossum",
+      "phoneNumber": "+31655579603",
+      "birthdate": "1956/01/31",
+      "technologies": [8]
+    },
+    {
+      "id": 3,
+      "name": "Brendan Eich",
+      "phoneNumber": "+4048730196",
+      "birthdate": "1980/08/20",
+      "technologies": [5, 6, 7]
+    }
+  ]
+}
