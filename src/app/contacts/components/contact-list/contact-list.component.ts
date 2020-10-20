@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { getMatIconNoHttpProviderError } from '@angular/material/icon';
+import { Contact } from '@app/contacts/models/contact';
+import { ContactsService } from '@app/contacts/services/contacts.service';
 
 @Component({
   selector: 'app-contact-list',
@@ -6,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-list.component.scss'],
 })
 export class ContactListComponent implements OnInit {
-  constructor() {}
+  contactList: Contact[];
+  isLoading = false;
 
-  ngOnInit(): void {}
+  constructor(private contactService: ContactsService) {}
+
+  ngOnInit(): void {
+    this.isLoading = true;
+    this.contactService.getAllContacts().subscribe((contactList) => {
+      this.contactList = contactList;
+      this.isLoading = false;
+    });
+  }
 }
