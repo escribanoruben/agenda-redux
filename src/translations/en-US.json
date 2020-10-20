@@ -10,5 +10,6 @@
   "Phone number": "Phone number",
   "Name": "Name",
   "Birthdate": "Birthdate",
-  "Technologies": "Technologies"
+  "Technologies": "Technologies",
+  "no technology": "none"
 }

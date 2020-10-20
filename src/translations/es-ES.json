@@ -10,5 +10,6 @@
   "Phone number": "Número de teléfono",
   "Name": "Nombre",
   "Birthdate": "Fecha de nacimiento",
-  "Technologies": "Technologías"
+  "Technologies": "Technologías",
+  "no technology": "ninguna"
 }
