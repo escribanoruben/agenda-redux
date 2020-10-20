@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "agenda",
+      "script": "ng",
+      "args": "serve"
+    },
+    {
+      "name": "api",
+      "script": "json-server",
+      "args": "--watch db.json"
+    }
+  ]
+}
