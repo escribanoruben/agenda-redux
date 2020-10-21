@@ -11,5 +11,8 @@
   "Name": "Name",
   "Birthdate": "Birthdate",
   "Technologies": "Technologies",
-  "no technology": "none"
+  "no technology": "none",
+  "Actions": "Actions",
+  "Create": "Create",
+  "Edit": "Edit"
 }

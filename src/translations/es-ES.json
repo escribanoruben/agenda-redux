@@ -11,5 +11,8 @@
   "Name": "Nombre",
   "Birthdate": "Fecha de nacimiento",
   "Technologies": "Technologías",
-  "no technology": "ninguna"
+  "no technology": "ninguna",
+  "Actions": "Acciones",
+  "Create": "Crear",
+  "Edit": "Editar"
 }

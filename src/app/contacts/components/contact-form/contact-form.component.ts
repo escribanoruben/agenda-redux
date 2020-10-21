@@ -19,7 +19,7 @@ export class ContactFormComponent implements OnInit {
   TechnologyList = Object.keys(Technology);
 
   contactForm = this.fb.group({
-    name: [null, Validators.required, Validators.maxLength(80)],
+    name: [null, Validators.required, Validators.minLength(3), Validators.maxLength(80)],
     phoneNumber: [null],
     birthdate: [null],
     technologies: [null],
