@@ -25,8 +25,8 @@ export class ContactsService {
     return this.http.post<Contact>(url, contact);
   }
 
-  updateContact(contact: Contact): Observable<Contact> {
-    const url = `${environment.baseUrl}/contacts/${contact.id}`;
+  updateContact(contactId: number, contact: Contact): Observable<Contact> {
+    const url = `${environment.baseUrl}/contacts/${contactId}`;
     return this.http.put<Contact>(url, contact);
   }
 }

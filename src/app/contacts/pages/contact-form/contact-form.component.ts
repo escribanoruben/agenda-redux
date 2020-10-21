@@ -66,7 +66,7 @@ export class ContactFormComponent implements OnInit {
   updateContact() {
     const contact = this.contactForm.value;
 
-    this.contactsService.updateContact(contact).subscribe(() => {
+    this.contactsService.updateContact(this.contactId, contact).subscribe(() => {
       const snackBarRef = this._snackBar.open('Contact updated successfully', 'edit', {
         duration: 4000,
       });
