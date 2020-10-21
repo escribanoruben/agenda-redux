@@ -5,12 +5,18 @@
     <mat-label> {{ 'Name' | translate }} </mat-label>
     <input matInput formControlName="name" />
     <mat-error *ngIf="contactForm.controls['name'].hasError('required')">
-      First name is <strong>required</strong>
+      {{ 'Name is required' | translate }}
+    </mat-error>
+    <mat-error *ngIf="contactForm.controls['name'].hasError('minlength')">
+      {{ 'Name too short' | translate }}
     </mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label> {{ 'Phone number' | translate }} </mat-label>
     <input matInput type="tel" formControlName="phoneNumber" />
+    <mat-error *ngIf="contactForm.controls['phoneNumber'].hasError('required')">
+      {{ 'Phone number is required' | translate }}
+    </mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label> {{ 'Birthdate' | translate }} </mat-label>
@@ -57,8 +63,13 @@
     {{ 'Go to contact list' | translate }}
   </a>
 
-  <a fxFlex *ngIf="contactForm.dirty" (click)="contactForm.reset()" mat-raised-button type="button">
+  <a fxFlex *ngIf="contactForm.dirty && isAddMode" (click)="contactForm.reset()" mat-raised-button type="button">
     <mat-icon> reset </mat-icon>
     {{ 'Reset' | translate }}
+  </a>
+
+  <a fxFlex *ngIf="contactForm.dirty && !isAddMode" (click)="loadData()" mat-raised-button type="button">
+    <mat-icon> cancel </mat-icon>
+    {{ 'Cancel' | translate }}
   </a>
 </div>
