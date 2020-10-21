@@ -12,17 +12,18 @@ import { ContactsService } from '@app/contacts/services/contacts.service';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
+  isLoading = false;
+  contact: Contact;
   contactId: number;
   isAddMode: boolean;
-
   Technology = Technology;
   TechnologyList = Object.keys(Technology);
 
   contactForm = this.fb.group({
-    name: [null, Validators.required, Validators.minLength(3), Validators.maxLength(80)],
-    phoneNumber: [null],
-    birthdate: [null],
-    technologies: [null],
+    name: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(80)]],
+    phoneNumber: [null, [Validators.required, Validators.maxLength(80)]],
+    birthdate: [null, []],
+    technologies: [null, []],
   });
 
   hasUnitNumber = false;
@@ -37,16 +38,40 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void {
     this.contactId = this.route.snapshot.params.contactId;
     this.isAddMode = !this.contactId;
+
+    if (!this.isAddMode) {
+      this.isLoading = true;
+      this.contactsService.getContactById(this.contactId).subscribe((contact) => {
+        const { id, ...contactWithId } = contact;
+        this.contactForm.setValue(contactWithId);
+        this.isLoading = false;
+      });
+    }
   }
 
-  onSubmit() {
+  createContact() {
     const contact = this.contactForm.value;
+
     this.contactsService.createContact(contact).subscribe((newContact: Contact) => {
       const snackBarRef = this._snackBar.open('Contact saved successfully', 'edit', {
         duration: 4000,
       });
       snackBarRef.onAction().subscribe(() => {
         this.router.navigate(['/contacts', 'edit', newContact.id]);
+      });
+      this.router.navigate(['/contacts', 'list']);
+    });
+  }
+
+  updateContact() {
+    const contact = this.contactForm.value;
+
+    this.contactsService.updateContact(contact).subscribe(() => {
+      const snackBarRef = this._snackBar.open('Contact updated successfully', 'edit', {
+        duration: 4000,
+      });
+      snackBarRef.onAction().subscribe(() => {
+        this.router.navigate(['/contacts', 'edit', contact.id]);
       });
       this.router.navigate(['/contacts', 'list']);
     });

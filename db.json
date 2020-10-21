@@ -1,11 +1,45 @@
 {
+  "technologies": [
+    {
+      "id": 1,
+      "name": "Angular"
+    },
+    {
+      "id": 2,
+      "name": "PHP"
+    },
+    {
+      "id": 3,
+      "name": "SQL"
+    },
+    {
+      "id": 4,
+      "name": ".Net"
+    },
+    {
+      "id": 5,
+      "name": "HTML"
+    },
+    {
+      "id": 6,
+      "name": "Javascript"
+    },
+    {
+      "id": 7,
+      "name": "CSS"
+    },
+    {
+      "id": 8,
+      "name": "Python"
+    }
+  ],
   "contacts": [
     {
       "id": 1,
       "name": "Ruben Escribano",
       "phoneNumber": "+34616673030",
       "birthdate": "1981/07/21",
-      "technologies": ["Angular", "SQL", "HTML", "Javascript", "Python"]
+      "technologies": ["Angular", "PHP", "SQL", ".Net", "HTML", "Javascript", "Python"]
     },
     {
       "id": 2,
@@ -20,6 +54,69 @@
       "phoneNumber": "+4048730196",
       "birthdate": "1980/08/20",
       "technologies": ["HTML", "Javascript"]
+    },
+    {
+      "name": "ruben",
+      "phoneNumber": "1234567",
+      "birthdate": "1981-07-21",
+      "technologies": null,
+      "id": 4
+    },
+    {
+      "name": "asdfasf",
+      "phoneNumber": "asdfasdf",
+      "birthdate": null,
+      "technologies": null,
+      "id": 5
+    },
+    {
+      "name": "asdfasdfas",
+      "phoneNumber": "asdfasdf",
+      "birthdate": null,
+      "technologies": [null, null],
+      "id": 6
+    },
+    {
+      "name": "asdfasdf",
+      "phoneNumber": "asdfasdf",
+      "birthdate": null,
+      "technologies": ["Angular", "Php"],
+      "id": 7
+    },
+    {
+      "name": "asdf",
+      "phoneNumber": "asdfasdf",
+      "birthdate": "21-07-1981",
+      "technologies": ["Angular", "Php"],
+      "id": 8
+    },
+    {
+      "name": "prueba",
+      "phoneNumber": "123456",
+      "birthdate": "2021/07/01",
+      "technologies": ["Angular", "Php"],
+      "id": 9
+    },
+    {
+      "name": "prueba2",
+      "phoneNumber": "123456",
+      "birthdate": "1981-07-21",
+      "technologies": ["Angular", "Php", "Sql"],
+      "id": 10
+    },
+    {
+      "name": "prueba3",
+      "phoneNumber": "123456",
+      "birthdate": "1981-07-21",
+      "technologies": ["Angular", "Php"],
+      "id": 11
+    },
+    {
+      "name": "prueba4",
+      "phoneNumber": "12345",
+      "birthdate": null,
+      "technologies": null,
+      "id": 12
     }
   ]
 }

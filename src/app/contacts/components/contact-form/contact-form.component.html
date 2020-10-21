@@ -1,3 +1,5 @@
+<mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+
 <form fxLayout="column" [formGroup]="contactForm" novalidate style="margin: 10px">
   <mat-form-field>
     <input matInput placeholder="Name" formControlName="name" />
@@ -14,19 +16,35 @@
 
   <mat-form-field>
     <mat-label> Tecnologies</mat-label>
-    <mat-select multiple>
-      <mat-option *ngFor="let technology of TechnologyList" [value]="TechnologyList[technology]">
+    <mat-select multiple formControlName="technologies">
+      <mat-option *ngFor="let technology of TechnologyList" [value]="technology">
         {{ Technology[technology] }}
       </mat-option>
     </mat-select>
   </mat-form-field>
 </form>
 <div fxLayout="row" fxLayoutGap="10px" style="margin: 10px">
-  <button fxFlex *ngIf="isAddMode" [disabled]="contactForm.invalid" mat-raised-button color="primary" type="button">
+  <button
+    fxFlex
+    *ngIf="isAddMode"
+    [disabled]="contactForm.invalid"
+    (click)="createContact()"
+    mat-raised-button
+    color="primary"
+    type="button"
+  >
     <mat-icon> create </mat-icon>
     {{ 'Create' | translate }}
   </button>
-  <button fxFlex *ngIf="!isAddMode" mat-raised-button color="primary" type="button">
+  <button
+    fxFlex
+    *ngIf="!isAddMode"
+    [disabled]="contactForm.invalid"
+    (click)="updateContact()"
+    mat-raised-button
+    color="primary"
+    type="button"
+  >
     <mat-icon> edit </mat-icon>
     {{ 'Edit' | translate }}
   </button>
