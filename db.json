@@ -1,11 +1,11 @@
 {
   "contacts": [
     {
-      "id": 1,
       "name": "Ruben Escribano",
       "phoneNumber": "+34616673030",
       "birthdate": "1981-07-21",
-      "technologies": ["Angular", "PHP", "SQL", ".Net", "HTML", "Javascript", "Python"]
+      "technologies": ["Angular", "PHP", "SQL", ".Net", "HTML", "Javascript", "Python"],
+      "id": 1
     },
     {
       "id": 2,
@@ -20,13 +20,6 @@
       "phoneNumber": "+4048730196",
       "birthdate": "1980-08-20",
       "technologies": ["HTML", "Javascript"]
-    },
-    {
-      "name": "ruben2",
-      "phoneNumber": "616673030",
-      "birthdate": "1981-07-21",
-      "technologies": ["Angular"],
-      "id": 4
     }
   ]
 }
