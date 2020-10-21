@@ -10,7 +10,9 @@ export class ContactTableComponent implements OnInit {
   @Input()
   contactList: Contact[];
 
-  displayedColumns = ['id', 'name', 'phoneNumber', 'birthdate', 'technologies', 'actions'];
+  displayedColumns = ['name', 'phoneNumber', 'birthdate', 'technologies', 'actions'];
 
   ngOnInit() {}
+
+  removeContact(contactId: number) {}
 }

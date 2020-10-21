@@ -2,20 +2,23 @@
 
 <form fxLayout="column" [formGroup]="contactForm" novalidate style="margin: 10px">
   <mat-form-field>
-    <input matInput placeholder="Name" formControlName="name" />
+    <mat-label> {{ 'Name' | translate }} </mat-label>
+    <input matInput formControlName="name" />
     <mat-error *ngIf="contactForm.controls['name'].hasError('required')">
       First name is <strong>required</strong>
     </mat-error>
   </mat-form-field>
   <mat-form-field>
-    <input matInput type="tel" placeholder="Phone number" formControlName="phoneNumber" />
+    <mat-label> {{ 'Phone number' | translate }} </mat-label>
+    <input matInput type="tel" formControlName="phoneNumber" />
   </mat-form-field>
   <mat-form-field>
-    <input matInput type="date" placeholder="Birthdate" formControlName="birthdate" />
+    <mat-label> {{ 'Birthdate' | translate }} </mat-label>
+    <input matInput type="date" formControlName="birthdate" />
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label> Tecnologies</mat-label>
+    <mat-label> {{ 'Technologies' | translate }} </mat-label>
     <mat-select multiple formControlName="technologies">
       <mat-option *ngFor="let technology of TechnologyList" [value]="technology">
         {{ Technology[technology] }}

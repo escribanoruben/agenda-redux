@@ -55,7 +55,7 @@
       <td mat-cell *matCellDef="let row">
         <button [routerLink]="['/contacts', 'edit', row.id]" mat-raised-button color="primary">
           <mat-icon> edit </mat-icon>
-          {{ 'Editar Contacto' | translate }}
+          {{ 'Edit Contact' | translate }}
         </button>
       </td>
     </ng-container>
@@ -63,14 +63,4 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-
-  <mat-paginator
-    #paginator
-    *ngIf="contactList"
-    [length]="contactList?.length"
-    [pageIndex]="0"
-    [pageSize]="50"
-    [pageSizeOptions]="[25, 50, 100, 250]"
-  >
-  </mat-paginator>
 </div>
