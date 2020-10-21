@@ -59,7 +59,7 @@ export class ContactFormComponent implements OnInit {
       snackBarRef.onAction().subscribe(() => {
         this.router.navigate(['/contacts', 'edit', newContact.id]);
       });
-      this.router.navigate(['/contacts', 'list']);
+      this.router.navigate(['/contacts']);
     });
   }
 
@@ -73,7 +73,7 @@ export class ContactFormComponent implements OnInit {
       snackBarRef.onAction().subscribe(() => {
         this.router.navigate(['/contacts', 'edit', contact.id]);
       });
-      this.router.navigate(['/contacts', 'list']);
+      this.router.navigate(['/contacts']);
     });
   }
 }

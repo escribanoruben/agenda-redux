@@ -13,14 +13,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MaterialModule } from '@app/material.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '@shared';
+import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { ContactListComponent } from './pages/contact-list/contact-list.component';
 import { ContactTableComponent } from './pages/contact-list/contact-table/contact-table.component';
-import { ContactsRoutingModule } from './contacts-routing.module';
-import { ContactsComponent } from './contacts.component';
 
 @NgModule({
-  declarations: [ContactsComponent, ContactListComponent, ContactTableComponent, ContactFormComponent],
+  declarations: [ContactListComponent, ContactTableComponent, ContactFormComponent],
   imports: [
     CommonModule,
     TranslateModule,
@@ -32,17 +31,11 @@ import { ContactsComponent } from './contacts.component';
     MatPaginatorModule,
     MatSortModule,
     TranslateModule,
-
     MatInputModule,
-
     MatButtonModule,
-
     MatSelectModule,
-
     MatRadioModule,
-
     MatCardModule,
-
     ReactiveFormsModule,
   ],
 })

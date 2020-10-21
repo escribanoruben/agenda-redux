@@ -11,7 +11,7 @@ import { SharedModule } from '@shared';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactsModule } from './contacts/contacts.module';
-import { HomeModule } from './home/home.module';
+
 import { MaterialModule } from './material.module';
 import { ShellModule } from './shell/shell.module';
 
@@ -27,7 +27,6 @@ import { ShellModule } from './shell/shell.module';
     CoreModule,
     SharedModule,
     ShellModule,
-    HomeModule,
     ContactsModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],

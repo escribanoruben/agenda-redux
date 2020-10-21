@@ -52,7 +52,7 @@
     {{ 'Edit' | translate }}
   </button>
 
-  <a fxFlex *ngIf="contactForm.pristine" [routerLink]="['/contacts', 'list']" mat-raised-button type="button">
+  <a fxFlex *ngIf="contactForm.pristine" [routerLink]="['/contacts']" mat-raised-button type="button">
     <mat-icon> people </mat-icon>
     {{ 'Go to contact list' | translate }}
   </a>
