@@ -13,5 +13,7 @@ Proyecto para demostrar conocimientos sobre Angular
   `npm install`
 - Arrancamos pm2:
   `pm2 start dev-process.json`
-- Y ppcionalmente podemos ver los logs de pm2:
-  `pm2 logs`
+- Opcionalmente podemos ver los logs de angular con el comando:
+  `pm2 logs agenda`
+- Y finalmente para detener todos los procesos
+  `pm2 stop all`
