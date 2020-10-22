@@ -14,6 +14,10 @@ import { ContactsModule } from './contacts/contacts.module';
 
 import { MaterialModule } from './material.module';
 import { ShellModule } from './shell/shell.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
@@ -28,7 +32,10 @@ import { ShellModule } from './shell/shell.module';
     SharedModule,
     ShellModule,
     ContactsModule,
-    AppRoutingModule, // must be imported as the last module as it contains the fallback route
+    AppRoutingModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }), // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
   providers: [],
