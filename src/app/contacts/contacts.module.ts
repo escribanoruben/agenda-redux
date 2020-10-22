@@ -11,12 +11,16 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MaterialModule } from '@app/material.module';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '@shared';
 import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { ContactListComponent } from './pages/contact-list/contact-list.component';
 import { ContactTableComponent } from './pages/contact-list/contact-table/contact-table.component';
+import { ContactEffects } from './store/contacts/contact.effects';
+import { contactReducer } from './store/contacts/contact.reducer';
 
 @NgModule({
   declarations: [ContactListComponent, ContactTableComponent, ContactFormComponent],
@@ -37,6 +41,8 @@ import { ContactTableComponent } from './pages/contact-list/contact-table/contac
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule,
+    StoreModule.forFeature('contacts', contactReducer),
+    EffectsModule.forFeature([ContactEffects]),
   ],
 })
 export class ContactsModule {}

@@ -1,20 +1,20 @@
-import { createReducer, on } from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 import { Contact } from '../../models/contact';
 import * as ContactActions from './contact.actions';
 
 export const contactFeatureKey = 'contact';
 
-export interface ContactsState {
+export interface ContactState {
   isLoading: boolean;
   contactList: Contact[];
 }
 
-export const initialState: ContactsState = {
+export const initialState: ContactState = {
   isLoading: false,
   contactList: [],
 };
 
-export const reducer = createReducer(
+const ContactReducer = createReducer(
   initialState,
 
   on(ContactActions.loadContacts, (state) => {
@@ -37,3 +37,7 @@ export const reducer = createReducer(
     };
   })
 );
+
+export function contactReducer(state: ContactState | undefined, action: Action) {
+  return ContactReducer(state, action);
+}

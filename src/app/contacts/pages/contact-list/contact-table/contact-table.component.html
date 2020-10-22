@@ -1,5 +1,5 @@
 <div class="mat-elevation-z8">
-  <table [dataSource]="contactList" mat-table class="full-width-table" matSort aria-label="Elements">
+  <table [dataSource]="(state$ | async).contactList" mat-table class="full-width-table" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Id</th>

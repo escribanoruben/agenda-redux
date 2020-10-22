@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutGap="20px" style="margin-top: 20px">
+<div *ngIf="state$ | async" fxLayout="column" fxLayoutGap="20px" style="margin-top: 20px">
   <div fxLayout="row" fxLayoutGap="10px">
     <button [routerLink]="['/contacts', 'create']" fxFlex mat-raised-button color="primary">
       <mat-icon> person_add </mat-icon>
@@ -11,7 +11,7 @@
     </button>
   </div>
 
-  <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+  <mat-progress-spinner *ngIf="(state$ | async).isLoading" mode="indeterminate"></mat-progress-spinner>
 
-  <app-contact-table *ngIf="contactList" [contactList]="contactList"></app-contact-table>
+  <app-contact-table></app-contact-table>
 </div>
