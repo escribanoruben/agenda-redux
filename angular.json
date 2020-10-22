@@ -141,5 +141,8 @@
       }
     }
   },
-  "defaultProject": "agenda"
+  "defaultProject": "agenda",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
